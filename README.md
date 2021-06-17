@@ -32,7 +32,7 @@ touch code.test.js
 npm run test:watch
 ```
 
-## js setup
+## ruby setup
 
 ```
 # install rvm
@@ -67,4 +67,34 @@ touch spec/code_spec.rb
 
 # run test watcher
 bundle exec guard
+```
+
+## python setup
+
+```
+# install python3
+open https://www.python.org/downloads/mac-osx/
+
+# install pipenv for virtual environment and dep mgmt
+pip install --user pipenv
+
+# activate virtual env
+pipenev shell
+
+# add test deps
+pipenv install pytest
+pipenv install pytest-watch
+
+# identify dir as package
+touch __init__.py
+
+# create code and test
+touch code.py
+touch test_code.py
+
+# (opt) add test command to scripts
+echo '[scripts]\ntest = "ptw"' > Pipfile
+
+# exec test
+pipenv run test
 ```
