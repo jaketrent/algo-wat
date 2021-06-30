@@ -98,3 +98,18 @@ echo '[scripts]\ntest = "ptw"' > Pipfile
 # exec test
 pipenv run test
 ```
+
+# Swift setup
+
+```
+# install swift with xcode
+
+# setup file and dir structure
+swift package init --name MyPackageName
+
+# compile
+swift build
+
+# test
+swift test
+```
