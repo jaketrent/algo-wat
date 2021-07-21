@@ -1,8 +1,9 @@
-import { rotateShift, rotateSplit } from './rotate.js'
+import { rotateShift, rotateSplit, rotateSwap } from './rotate.js'
 
 const implementations = [
   ['#rotateShift', rotateShift],
   ['#rotateSplit', rotateSplit],
+  ['#rotateSwap', rotateSwap],
 ]
 
 describe.each(implementations)('%s', (_desc, rotate) => {

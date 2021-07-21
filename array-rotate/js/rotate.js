@@ -13,3 +13,14 @@ export function rotateSplit(array, k) {
   const back = array.slice(array.length - k)
   return [...back, ...front]
 }
+
+export function rotateSwap(array, k) {
+  for (let i = 0; i < k; ++i) {
+    const toPutAtFront = array[array.length - 1]
+    for (let j = array.length - 1; j > 0; --j) {
+      array[j] = array[j - 1]
+    }
+    array[0] = toPutAtFront
+  }
+  return array
+}
